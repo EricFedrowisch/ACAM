@@ -24,6 +24,9 @@ class DDict:
             s += t
         return s
 
+    def __len__(self):
+        return self.len()
+
     def __repr__(self):
         return self.__str__()
 
