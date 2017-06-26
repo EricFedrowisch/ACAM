@@ -1,87 +1,87 @@
-Setup [Start] => 2017-06-17 17:24:40.012696
+Setup [Start] => 2017-06-26 01:03:27.951634
 Creating List of 'random' strings values.
-Setup Done => 2017-06-17 17:24:41.312513
+Setup Done => 2017-06-26 01:03:29.250003
 
 ###############################
-[Start] Python List Append 100000 elements => 2017-06-17 17:24:41.312533
-Elapsed time: 0.00988292694092
-Time/Element: 9.88292694092e-08
-[End]   Python List Append 100000 elements => 2017-06-17 17:24:41.322462
+[Start] Python List Append 100000 elements => 2017-06-26 01:03:29.250024
+Elapsed time: 0.0096869468689
+Time/Element: 9.6869468689e-08
+[End]   Python List Append 100000 elements => 2017-06-26 01:03:29.259757
 
 
-[Start] DDict Append 100000 elements => 2017-06-17 17:24:41.322473
-Elapsed time: 0.283742904663
-Time/Element: 2.83742904663e-06
-[End]   DDict Append 100000 elements => 2017-06-17 17:24:41.606250
-
-###############################
-[Start] Python List Access 10000 elements => 2017-06-17 17:24:41.606265
-Elapsed time: 0.000353097915649
-Time/Element: 3.53097915649e-08
-[End]   Python List Access 10000 elements => 2017-06-17 17:24:41.606629
-
-
-[Start] DDict Access 10000 elements => 2017-06-17 17:24:41.606635
-Elapsed time: 0.00447297096252
-Time/Element: 4.47297096252e-07
-[End]   DDict Access 10000 elements => 2017-06-17 17:24:41.611116
+[Start] DDict Append 100000 elements => 2017-06-26 01:03:29.259767
+Elapsed time: 0.283833026886
+Time/Element: 2.83833026886e-06
+[End]   DDict Append 100000 elements => 2017-06-26 01:03:29.543632
 
 ###############################
-[Start] Python List Index 10000 elements => 2017-06-17 17:24:41.611122
-Elapsed time: 4.92375206947
-Time/Element: 0.000492375206947
-[End]   Python List Index 10000 elements => 2017-06-17 17:24:46.534898
+[Start] Python List Access 10000 elements => 2017-06-26 01:03:29.543646
+Elapsed time: 0.000350952148438
+Time/Element: 3.50952148437e-08
+[End]   Python List Access 10000 elements => 2017-06-26 01:03:29.544016
 
 
-[Start] DDict Index 100000 elements => 2017-06-17 17:24:46.534912
-Elapsed time: 0.00346803665161
-Time/Element: 3.46803665161e-07
-[End]   DDict Index 10000 elements => 2017-06-17 17:24:46.538390
-
-###############################
-[Start] Python List Insert 100 elements => 2017-06-17 17:24:46.538397
-Elapsed time: 0.00439500808716
-Time/Element: 4.39500808716e-07
-[End]   Python List Insert 100 elements => 2017-06-17 17:24:46.542799
-
-
-[Start] DDict Insert 100 elements => 2017-06-17 17:24:46.542803
-Elapsed time: 34.2053749561
-Time/Element: 0.00342053749561
-[End]   DDict Insert 100 elements => 2017-06-17 17:25:20.748197
+[Start] DDict Access 10000 elements => 2017-06-26 01:03:29.544021
+Elapsed time: 0.00449991226196
+Time/Element: 4.49991226196e-07
+[End]   DDict Access 10000 elements => 2017-06-26 01:03:29.548529
 
 ###############################
-[Start] Python List Pop 100 elements => 2017-06-17 17:25:20.748213
-Elapsed time: 0.00120115280151
-Time/Element: 1.20115280151e-05
-[End]   Python List Insert 100 elements => 2017-06-17 17:25:20.749424
+[Start] Python List Index 10000 elements => 2017-06-26 01:03:29.548533
+Elapsed time: 4.9045419693
+Time/Element: 0.00049045419693
+[End]   Python List Index 10000 elements => 2017-06-26 01:03:34.453097
 
 
-[Start] DDict Pop 100 elements => 2017-06-17 17:25:20.749429
-Elapsed time: 18.8225729465
-Time/Element: 0.188225729465
-[End]   DDict Insert 100 elements => 2017-06-17 17:25:39.572019
-
-###############################
-[Start] Python List Sort 100000 elements => 2017-06-17 17:25:39.572037
-Elapsed time: 0.0415079593658
-Time/Element: 4.15079593658e-07
-[End]   Python List Sort 100000 elements => 2017-06-17 17:25:39.613572
-
-
-[Start] DDict Sort 100000 elements => 2017-06-17 17:25:39.613586
-Elapsed time: 0.495680093765
-Time/Element: 4.95680093765e-06
-[End]   DDict Sort 100000 elements => 2017-06-17 17:25:40.109301
+[Start] DDict Index 100000 elements => 2017-06-26 01:03:34.453111
+Elapsed time: 0.0035879611969
+Time/Element: 3.5879611969e-07
+[End]   DDict Index 10000 elements => 2017-06-26 01:03:34.456708
 
 ###############################
-[Start] Python List Count 100 elements => 2017-06-17 17:25:40.109363
-Elapsed time: 0.276579856873
-Time/Element: 0.00276579856873
-[End]   Python List Sort 100 elements => 2017-06-17 17:25:40.385973
+[Start] Python List Insert100 elements => 2017-06-26 01:03:34.456715
+Elapsed time: 0.00697302818298
+Time/Element: 6.97302818298e-07
+[End]   Python List Insert100 elements => 2017-06-26 01:03:34.463706
 
 
-[Start] DDict Count 100 elements => 2017-06-17 17:25:40.385990
-Elapsed time: 7.5101852417e-05
-Time/Element: 7.5101852417e-07
-[End]   DDict Count 100 elements => 2017-06-17 17:25:40.386076
+[Start] DDict Insert 100 elements => 2017-06-26 01:03:34.463717
+Elapsed time: 33.5554339886
+Time/Element: 0.00335554339886
+[End]   DDict Insert 100 elements => 2017-06-26 01:04:08.019170
+
+###############################
+[Start] Python List Pop 100 elements => 2017-06-26 01:04:08.019185
+Elapsed time: 0.00121212005615
+Time/Element: 1.21212005615e-05
+[End]   Python List Insert 100 elements => 2017-06-26 01:04:08.020407
+
+
+[Start] DDict Pop 100 elements => 2017-06-26 01:04:08.020412
+Elapsed time: 18.8026349545
+Time/Element: 0.188026349545
+[End]   DDict Insert 100 elements => 2017-06-26 01:04:26.823064
+
+###############################
+[Start] Python List Sort 100000 elements => 2017-06-26 01:04:26.823079
+Elapsed time: 0.0436909198761
+Time/Element: 4.36909198761e-07
+[End]   Python List Sort 100000 elements => 2017-06-26 01:04:26.866796
+
+
+[Start] DDict Sort 100000 elements => 2017-06-26 01:04:26.866809
+Elapsed time: 0.447832107544
+Time/Element: 4.47832107544e-06
+[End]   DDict Sort 100000 elements => 2017-06-26 01:04:27.314675
+
+###############################
+[Start] Python List Count 100 elements => 2017-06-26 01:04:27.314740
+Elapsed time: 0.167907953262
+Time/Element: 0.00167907953262
+[End]   Python List Sort 100 elements => 2017-06-26 01:04:27.482677
+
+
+[Start] DDict Count 100 elements => 2017-06-26 01:04:27.482693
+Elapsed time: 7.10487365723e-05
+Time/Element: 7.10487365723e-07
+[End]   DDict Count 100 elements => 2017-06-26 01:04:27.482772
