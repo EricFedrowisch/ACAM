@@ -200,19 +200,4 @@ class DDict:
                 d.append(k)
         return d
 
-# TODO: Add temporal stamping to indices
-if __name__ == "__main__":
-    d = DDict()
-    d.append('a')
-    d.append('a')
-    d.append('cba')
-    d.append('a')
-    d.set(4, 123)
-    print d
-    print d[0]
-    d[0] = 'abc'
-    print d
-    e = d.sort()
-    print e
-
 # Copyright June 11, 2017 by Eric Fedrowisch, All Rights Reserved.
