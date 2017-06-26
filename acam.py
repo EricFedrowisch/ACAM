@@ -1,11 +1,11 @@
 """
-Double dictionary that behaves like a list but should be faster to search. It
-has indexes like a list but can also search and return all the indexes that
-contain a given value.
+Associative Content Addressable Memory data structure that behaves like a list
+but should be faster to search. It has indexes like a list but can also search
+and return all the indexes that contain a given value.
 """
 
 
-class DDict:
+class Acam:
     def __init__(self):
         # In dict indices; keys must be integer, vals must be hashable
         self.indices = dict()
@@ -51,18 +51,18 @@ class DDict:
         v = self.indices[i]
         self.values[v] = self.values[v].difference([i])
         if len(self.values[v]) < 1:  # If there are no indices left..
-            del self.values[v]  # Remove value from ddict
+            del self.values[v]  # Remove value from Acam
 
     def __shift__(self, a, b):
         """Convenience function. Overwrite values at index a onto b."""
         self.set(b, self.indices[a])  # Overwrite b with a
 
     def __setitem__(self, i, x):
-        # Allows for use of ddict[i] = x syntax.
+        # Allows for use of Acam[i] = x syntax.
         self.set(i, x)
 
     def __getitem__(self, i):
-        """Method to allow for ddict[i] syntax."""
+        """Method to allow for Acam[i] syntax."""
         try:
             i = int(i)
             r = self.indices[i]
@@ -75,7 +75,7 @@ class DDict:
         return self
 
     def __delitem__(self, i):
-        """Allows for use of del ddict[i] syntax."""
+        """Allows for use of del Acam[i] syntax."""
         self.pop(i)
 
     def next(self):
@@ -92,11 +92,11 @@ class DDict:
         return len(self.indices)
 
     def unique(self):
-        """Return number of unique values in DDict."""
+        """Return number of unique values in Acam."""
         return len(self.values)
 
     def count(self, x):
-        """Return number of occurences of a value in DDict."""
+        """Return number of occurences of a value in Acam."""
         try:  # See if x exists as a value...
             c = len(self.values[x])
         except KeyError:  # If not catch KeyError
@@ -125,7 +125,7 @@ class DDict:
         self.set(self.len(), val)
 
     def extend(self, iterable):
-        """Extend the DDict by appending all the items from the iterable."""
+        """Extend the Acam by appending all the items from the iterable."""
         try:
             for i in iterable:
                 self.append(i)
@@ -141,7 +141,7 @@ class DDict:
         return list(r)
 
     def insert(self, i, x):
-        """Insert x at a given position i, give i in range 0 to len of ddict"""
+        """Insert x at a given position i, give i in range 0 to len of Acam"""
         if i < 0 or i > self.len():
             raise ValueError
         r = xrange(self.len()-1, i, -1)
@@ -153,7 +153,7 @@ class DDict:
     def reverse(self):
         """Reverse the value indices."""
         r = xrange(self.len()-1, -1, -1)
-        d = DDict()
+        d = Acam()
         for i in r:
             d.append(self[i])
         return d
@@ -163,8 +163,8 @@ class DDict:
         self.__init__()  # Idk why you would want this, but here it is.
 
     def copy(self):
-        """Return a shallow copy of the ddict."""
-        d = DDict()
+        """Return a shallow copy of the Acam."""
+        d = Acam()
         [d.append(self[i]) for i in sorted(self.indices.keys())]
         return d
 
@@ -182,7 +182,7 @@ class DDict:
         return x
 
     def remove(self, x, All=False):
-        """Remove the first item (or optionally all) from the ddict whose
+        """Remove the first item (or optionally all) from the Acam whose
         value is x."""
         if x not in self.values:
             raise ValueError
@@ -194,7 +194,7 @@ class DDict:
                 self.pop(list(self.values[x])[0])
 
     def sort(self, cmp=None, key=None, reverse=False):
-        d = DDict()
+        d = Acam()
         for k in sorted(self.values.keys(), cmp, key, reverse):
             for i in xrange(0, len(self.values[k])):
                 d.append(k)

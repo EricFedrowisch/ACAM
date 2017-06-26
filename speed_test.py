@@ -1,7 +1,7 @@
 from random import seed, randint
 from string import ascii_lowercase
 from datetime import datetime
-from ddict import DDict as d
+from acam import Acam as d
 from time import time
 
 
