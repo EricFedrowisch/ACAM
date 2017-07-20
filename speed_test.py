@@ -78,7 +78,7 @@ if __name__ == '__main__':
     testStrings = []
     indexStrings = []
     popIndexList = []
-    for i in xrange(n):  # Make random contents for list and DDict
+    for i in xrange(n):  # Make random contents for list and Acam
         testStrings.append(createRandomString())
     for i in xrange(nIndex):  # Pick random elements for index speed test
         r = randint(0, len(testStrings))
@@ -96,14 +96,14 @@ if __name__ == '__main__':
     print "Elapsed time: " + str(listappendSpeed)
     print "Time/Element: " + str(listappendSpeed/n)
     print "[End]   Python List Append " + str(n) + " elements => " + t()
-    # ddict
+    # Acam
     print "\n"
-    print "[Start] DDict Append " + str(n) + " elements => " + t()
-    testDDict = d()
-    ddictappendSpeed = appendTest(testDDict)
-    print "Elapsed time: " + str(ddictappendSpeed)
-    print "Time/Element: " + str(ddictappendSpeed/n)
-    print "[End]   DDict Append " + str(n) + " elements => " + t()
+    print "[Start] Acam Append " + str(n) + " elements => " + t()
+    testAcam = d()
+    AcamappendSpeed = appendTest(testAcam)
+    print "Elapsed time: " + str(AcamappendSpeed)
+    print "Time/Element: " + str(AcamappendSpeed/n)
+    print "[End]   Acam Append " + str(n) + " elements => " + t()
 
     print "\n###############################"
     # Test access speeds
@@ -112,13 +112,13 @@ if __name__ == '__main__':
     print "Elapsed time: " + str(listAccessSpeed)
     print "Time/Element: " + str(listAccessSpeed/nAccess)
     print "[End]   Python List Access " + str(nAccess) + " elements => " + t()
-    # ddict append speed test
+    # Acam append speed test
     print "\n"
-    print "[Start] DDict Access " + str(nAccess) + " elements => " + t()
-    ddictAccessSpeed = accessTest(testDDict, nAccess)
-    print "Elapsed time: " + str(ddictAccessSpeed)
-    print "Time/Element: " + str(ddictAccessSpeed/nAccess)
-    print "[End]   DDict Access " + str(nAccess) + " elements => " + t()
+    print "[Start] Acam Access " + str(nAccess) + " elements => " + t()
+    AcamAccessSpeed = accessTest(testAcam, nAccess)
+    print "Elapsed time: " + str(AcamAccessSpeed)
+    print "Time/Element: " + str(AcamAccessSpeed/nAccess)
+    print "[End]   Acam Access " + str(nAccess) + " elements => " + t()
 
     # Test search speeds
     print "\n###############################"
@@ -127,13 +127,13 @@ if __name__ == '__main__':
     print "Elapsed time: " + str(listIndexSpeed)
     print "Time/Element: " + str(listIndexSpeed/nIndex)
     print "[End]   Python List Index " + str(nIndex) + " elements => " + t()
-    # ddict append speed test
+    # Acam append speed test
     print "\n"
-    print "[Start] DDict Index " + str(n) + " elements => " + t()
-    ddictIndexSpeed = accessTest(testDDict, nIndex)
-    print "Elapsed time: " + str(ddictIndexSpeed)
-    print "Time/Element: " + str(ddictIndexSpeed/nIndex)
-    print "[End]   DDict Index " + str(nIndex) + " elements => " + t()
+    print "[Start] Acam Index " + str(n) + " elements => " + t()
+    AcamIndexSpeed = accessTest(testAcam, nIndex)
+    print "Elapsed time: " + str(AcamIndexSpeed)
+    print "Time/Element: " + str(AcamIndexSpeed/nIndex)
+    print "[End]   Acam Index " + str(nIndex) + " elements => " + t()
 
     # Test insert speeds
     print "\n###############################"
@@ -145,11 +145,11 @@ if __name__ == '__main__':
     print "Time/Element: " + str(listInsertSpeed/nIndex)
     print "[End]   Python List Insert" + str(insertLen) + " elements => " + t()
     print "\n"
-    print "[Start] DDict Insert " + str(insertLen) + " elements => " + t()
-    ddictInsertSpeed = insertTest(toInsert, testDDict)
-    print "Elapsed time: " + str(ddictInsertSpeed)
-    print "Time/Element: " + str(ddictInsertSpeed/nIndex)
-    print "[End]   DDict Insert " + str(insertLen) + " elements => " + t()
+    print "[Start] Acam Insert " + str(insertLen) + " elements => " + t()
+    AcamInsertSpeed = insertTest(toInsert, testAcam)
+    print "Elapsed time: " + str(AcamInsertSpeed)
+    print "Time/Element: " + str(AcamInsertSpeed/nIndex)
+    print "[End]   Acam Insert " + str(insertLen) + " elements => " + t()
 
     # Test pop speeds
     print "\n###############################"
@@ -160,27 +160,27 @@ if __name__ == '__main__':
     print "Time/Element: " + str(listPopSpeed/popLen)
     print "[End]   Python List Insert " + str(popLen) + " elements => " + t()
     print "\n"
-    print "[Start] DDict Pop " + str(popLen) + " elements => " + t()
-    ddictPopSpeed = popTest(testDDict)
-    print "Elapsed time: " + str(ddictPopSpeed)
-    print "Time/Element: " + str(ddictPopSpeed/popLen)
-    print "[End]   DDict Insert " + str(popLen) + " elements => " + t()
+    print "[Start] Acam Pop " + str(popLen) + " elements => " + t()
+    AcamPopSpeed = popTest(testAcam)
+    print "Elapsed time: " + str(AcamPopSpeed)
+    print "Time/Element: " + str(AcamPopSpeed/popLen)
+    print "[End]   Acam Insert " + str(popLen) + " elements => " + t()
 
     # Test sort speeds
     print "\n###############################"
     listLen = len(testlist)
-    ddictLen = len(testDDict)
+    AcamLen = len(testAcam)
     print "[Start] Python List Sort " + str(listLen) + " elements => " + t()
     listSortSpeed = sortTest(testlist)
     print "Elapsed time: " + str(listSortSpeed)
     print "Time/Element: " + str(listSortSpeed/listLen)
     print "[End]   Python List Sort " + str(listLen) + " elements => " + t()
     print "\n"
-    print "[Start] DDict Sort " + str(ddictLen) + " elements => " + t()
-    ddictSortSpeed = sortTest(testDDict)
-    print "Elapsed time: " + str(ddictSortSpeed)
-    print "Time/Element: " + str(ddictSortSpeed/ddictLen)
-    print "[End]   DDict Sort " + str(ddictLen) + " elements => " + t()
+    print "[Start] Acam Sort " + str(AcamLen) + " elements => " + t()
+    AcamSortSpeed = sortTest(testAcam)
+    print "Elapsed time: " + str(AcamSortSpeed)
+    print "Time/Element: " + str(AcamSortSpeed/AcamLen)
+    print "[End]   Acam Sort " + str(AcamLen) + " elements => " + t()
 
     # Test count
     toCount = []
@@ -194,8 +194,8 @@ if __name__ == '__main__':
     print "Time/Element: " + str(listCountSpeed/countLen)
     print "[End]   Python List Sort " + str(countLen) + " elements => " + t()
     print "\n"
-    print "[Start] DDict Count " + str(countLen) + " elements => " + t()
-    ddictCountSpeed = countTest(toCount, testDDict)
-    print "Elapsed time: " + str(ddictCountSpeed)
-    print "Time/Element: " + str(ddictCountSpeed/countLen)
-    print "[End]   DDict Count " + str(countLen) + " elements => " + t()
+    print "[Start] Acam Count " + str(countLen) + " elements => " + t()
+    AcamCountSpeed = countTest(toCount, testAcam)
+    print "Elapsed time: " + str(AcamCountSpeed)
+    print "Time/Element: " + str(AcamCountSpeed/countLen)
+    print "[End]   Acam Count " + str(countLen) + " elements => " + t()
